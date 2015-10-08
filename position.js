@@ -1,5 +1,9 @@
 /**
- * Created by Reed on 9/22/2015.
+ * This function accepts a sorted array of integers and a target value and returns the index where the target value is
+ * found. Or if the target value is not found, returns where it would be if it were inserted in order.
+ * @param data The sorted array of integers.
+ * @param value The target value to find.
+ * @returns {*} The target value index or expected index.
  */
 function position(data, value) {
   if(data[0] >= value) {
@@ -23,16 +27,4 @@ function position(data, value) {
     i++;
   }
   return index;
-};
-
-var testData = [1, 3, 5, 6];
-console.log(position(testData, 5));
-console.log(position(testData, 2));
-console.log(position(testData, 7));
-console.log(position(testData, 0));
-
-var testData2 = [1, 2, 3, 4, 5, 6];
-console.log(position(testData2, 5));
-console.log(position(testData2, 2));
-console.log(position(testData2, 7));
-console.log(position(testData2, 0));
+}
